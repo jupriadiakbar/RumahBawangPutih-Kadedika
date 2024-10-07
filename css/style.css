@@ -1,0 +1,685 @@
+:root {
+  --primary: #795757;
+  --bg: rgb(255, 240, 209);
+}
+
+* {
+  margin: 0%;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: black;
+}
+
+/* Navbar */
+
+.navbar-logo img {
+  margin-right: 2rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 7%;
+  border-bottom: 2px solid #743f1b;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background-color: rgb(255, 255, 255);
+}
+
+.navbar .navbar-nav {
+  margin-left: auto; /* Mendorong navbar-nav ke sebelah kanan */
+}
+
+.navbar .navbar-nav a {
+  color: black;
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: #ff6500;
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: black;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+/* hero section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../aset/header-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(0deg, rgb(255, 240, 209) 8%, rgba(255, 255, 255, 0) 50%);
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+}
+
+.hero .content h1 {
+  font-size: 5em;
+  color: rgb(0, 0, 0);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.74);
+}
+
+.hero .content h1 span {
+  color: var(--primary);
+}
+
+.hero .content p {
+  font-size: 1.5rem;
+  margin-top: 0.2rem;
+  line-height: 1.4;
+  font-weight: 100;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.139);
+}
+
+.hero .content .cta {
+  margin-top: 1.8rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: rgb(255, 255, 255);
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.662);
+}
+
+/* About sectiont */
+#about {
+  padding-bottom: 7rem;
+}
+.about,
+.testimoni,
+.products {
+  padding: 7.5rem 7% 1.4rem;
+}
+
+.about h2,
+.testimoni h2,
+.kontak h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 2rem;
+  color: #3b3030;
+}
+
+.about h2 span {
+  color: #3b3030;
+}
+
+.about .row {
+  display: flex;
+}
+
+.about .row .about-img {
+  flex: 1 1 35rem;
+}
+
+.about .row .about-img img {
+  width: 100%;
+  padding-top: 2.5rem;
+}
+.about .row .conten {
+  flex: 1 1 40rem;
+  padding-left: 2.5rem;
+}
+
+.about .row .conten h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #3b3030;
+}
+
+.about .row .conten p {
+  margin-bottom: 00.8rem;
+  font-size: 1.2rem;
+  font-weight: 100;
+  line-height: 1.6;
+  color: #3b3030;
+}
+
+.about .visi-misi {
+  padding-top: 1.5rem;
+  text-align: center;
+}
+
+.about .visi-misi .card {
+  background-color: var(--primary);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.21);
+  width: 300px;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.about .visi-misi .card:hover {
+  transform: scale(1.05); /* Efek saat di-hover */
+}
+
+.about .visi-misi .card-m .misi {
+  background-color: var(--primary);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.21);
+  width: 300px;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.about .visi-misi .card-m:hover {
+  transform: scale(1.05); /* Efek saat di-hover */
+}
+
+.about .visi-misi .card .visi h3 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  margin-top: 2rem;
+  color: #ff944d;
+}
+.about .visi-misi .card .visi p {
+  margin-bottom: 00.8rem;
+  font-size: 1.3rem;
+  font-weight: 100;
+  line-height: 1.6;
+  color: rgb(255, 255, 255);
+  padding: 1.5rem;
+}
+
+.about .visi-misi .card-m .misi h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  margin-top: 2rem;
+  color: #ff944d;
+}
+.about .visi-misi .card-m .misi p {
+  margin-bottom: 00.8rem;
+  font-size: 1.3rem;
+  font-weight: 100;
+  line-height: 1.6;
+  color: rgb(255, 255, 255);
+  padding: 1.5rem;
+}
+
+/* Testimoni */
+
+.container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.text-section {
+  width: 30%;
+  height: 400px;
+  background-color: #3b3030;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffff;
+}
+
+.slider-section {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slide-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 400px; /* Tinggi gambar tetap */
+  object-fit: cover; /* Memastikan gambar tidak terdistorsi dan tetap sesuai dengan ukuran */
+  border-radius: 2px;
+}
+
+/* Tombol navigasi */
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--primary);
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 50%;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Responsif untuk tablet */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-section,
+  .slider-section {
+    width: 100%;
+  }
+
+  .text-section {
+    padding: 8px;
+    text-align: center;
+  }
+
+  button {
+    padding: 8px;
+  }
+}
+
+/* Responsif untuk layar handphone */
+@media (max-width: 480px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .text-section {
+    width: 100%;
+    padding: 5px;
+  }
+
+  .slider-section {
+    width: 100%;
+  }
+
+  .slide img {
+    width: 100%;
+  }
+
+  button {
+    padding: 6px;
+    font-size: 16px;
+  }
+}
+
+/* Untuk layar yang sangat kecil atau sempit */
+@media (max-width: 320px) {
+  .text-section {
+    padding: 5px;
+    font-size: 14px;
+  }
+
+  .slide img {
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  button {
+    padding: 4px;
+    font-size: 14px;
+  }
+}
+
+/* Layanan Produk */
+
+#product {
+  background-color: #3b3030;
+  padding-bottom: 2rem;
+}
+
+.products h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 2rem;
+  color: var(--bg);
+}
+
+.product-cards {
+  display: flex;
+  justify-content: space-around; /* Menyebarkan card dengan jarak */
+  flex-wrap: wrap; /* Memungkinkan card untuk membungkus ke baris berikutnya */
+}
+
+.products p {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  font-weight: 100;
+  line-height: 1.6;
+  text-align: center;
+  color: var(--bg);
+}
+
+.product-cards p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 100;
+  line-height: 1.6;
+  color: #3b3030;
+}
+
+.card {
+  background-color: white; /* Warna latar belakang card */
+  border: 1px solid #ccc; /* Border untuk card */
+  border-radius: 10px; /* Sudut melengkung */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek 3D */
+  padding: 1rem; /* Ruang di dalam card */
+  width: 300px; /* Lebar card */
+  margin: 1rem; /* Margin antar card */
+  transition: transform 0.2s; /* Efek transisi saat hover */
+}
+
+.card img {
+  width: 100%; /* Gambar menyesuaikan lebar card */
+  height: 200px; /* Tinggi tetap untuk gambar */
+  object-fit: cover; /* Menjaga rasio gambar */
+  border-radius: 10px 10px 0 0; /* Sudut melengkung pada bagian atas */
+}
+
+.card h3 {
+  margin: 0.5rem 0; /* Margin atas dan bawah untuk judul */
+  color: #743f1b; /* Warna judul produk */
+}
+
+.card p {
+  margin: 0; /* Margin untuk deskripsi dan harga */
+  text-align: left;
+}
+
+.card .price {
+  font-weight: bold; /* Menebalkan teks harga */
+  color: #e67e22; /* Warna untuk harga */
+}
+
+/* Efek saat hover pada card */
+.card:hover {
+  transform: scale(1.05); /* Membesar card saat dihover */
+  cursor: pointer; /* Mengubah kursor menjadi pointer */
+}
+
+/* Gaya untuk link See All */
+.see-all {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  color: var(--bg); /* Warna teks */
+  text-decoration: none; /* Menghilangkan garis bawah */
+  font-weight: bold;
+  border: 1px solid #e67e22; /* Border sekeliling teks */
+  padding: 0.5rem 1.5rem;
+  border-radius: 5px; /* Sudut melengkung */
+  transition: background-color 0.3s, color 0.3s; /* Transisi untuk hover */
+}
+
+/* Hover efek untuk See All */
+.see-all:hover {
+  background-color: #e67e22; /* Mengubah warna latar saat hover */
+  color: white; /* Mengubah warna teks saat hover */
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+  .product-cards {
+    flex-direction: column; /* Mengubah layout menjadi kolom */
+    align-items: center; /* Rata tengah */
+  }
+
+  .card {
+    width: 90%; /* Lebar card di perangkat kecil */
+  }
+}
+
+/* kontak */
+
+.kontak {
+  padding-top: 4.2rem;
+  background-color: #ffffff;
+}
+
+.containers {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  height: 60vh;
+  margin-left: 1.5rem; /* Memberi margin kiri untuk menggeser kontainer ke kanan */
+}
+
+.map {
+  flex: 4; /* Membagi dua area secara proporsional */
+  padding-left: 6rem;
+}
+
+.info {
+  flex: 2; /* Membagi dua area secara proporsional */
+  padding: 20px;
+  color: #3b3030;
+  background-color: #ffffff; /* Warna latar belakang */
+  font-size: 1.1rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.192);
+}
+
+h1 {
+  margin-top: 10px;
+  color: #e67e22;
+}
+
+p {
+  margin: 12px 0;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .containers {
+    flex-direction: column; /* Stack elements vertically on small screens */
+    height: auto; /* Remove fixed height for smaller screens */
+    margin-left: 0; /* Remove left margin */
+  }
+
+  .map {
+    padding-left: 0; /* Remove left padding */
+    width: 100%; /* Make the map take full width */
+    height: 250px; /* Set a fixed height for the map */
+  }
+
+  .info {
+    flex: 1; /* Allow the info section to take full width */
+    padding: 10px; /* Reduce padding */
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem; /* Adjust heading size */
+  }
+
+  p {
+    font-size: 1rem; /* Adjust paragraph size */
+  }
+}
+
+/* footer */
+
+footer {
+  background-color: var(--primary);
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 3rem;
+}
+
+footer .socials {
+  padding: 1rem 0 2rem;
+}
+
+footer .socials a {
+  color: #ffffff;
+  margin: 1rem;
+}
+
+footer .socials a:hover {
+  color: #e67e22;
+}
+footer .links {
+  margin-bottom: 1.4rem;
+}
+
+footer .links a {
+  color: rgb(255, 255, 255);
+  padding: 0.4rem 0.5rem;
+}
+
+footer .links a:hover {
+  color: #e67e22;
+}
+
+footer .credit {
+  font-size: 0.8rem;
+  font-size: 0.8rem;
+}
+
+footer .credit a {
+  color: var(--bg);
+  font-weight: 700;
+}
+/* Media Queries */
+/* Labtop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 90%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 758px) {
+  html {
+    font-size: 62.5%;
+  }
+  #produk-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: black;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: var(--bg);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  .about .row {
+    flex-wrap: wrap;
+  }
+
+  .about .row .about-img img {
+    height: 24rem;
+    object-fit: cover;
+    object-position: center;
+    align-items: center;
+  }
+  .about .row .conten {
+    padding: 0;
+  }
+
+  .about .row .conten h3 {
+    margin-top: 2rem;
+    font-size: 2rem;
+  }
+  .about .row .conten p {
+    font-size: 1.6rem;
+  }
+}
+
+/* Mobile pone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
